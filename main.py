@@ -8,9 +8,9 @@ client = OpenAI()
 
 speech_file_path = Path(__file__).parent / "speech.mp3"
 response = client.audio.speech.create(
-  model="tts-1",
+  model="tts-1-hd",
   voice="alloy",
-  input="Hola, muy buenas a todos y bienvenidos a un nuevo video!"
+  input="Hola soy Juan y bienvenido a un nuevo video!"
 )
 
 response.stream_to_file(speech_file_path)
